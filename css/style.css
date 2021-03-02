@@ -247,7 +247,6 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 
-
 .main-nav,
 .main-nav * {
   margin: 0;
@@ -522,8 +521,6 @@ h6 {
   color: #1bb1dc;
 }
 
-
-
 /* Call To Action Section
 --------------------------------*/
 
@@ -556,8 +553,6 @@ h6 {
   border: 3px solid #fff;
   color: #fff;
 }
-
-
 
 /* Testimonials Section
 --------------------------------*/
@@ -707,13 +702,9 @@ h6 {
 
 #clients img {
   max-width: 80%;
-  opacity: 0.5;
-  transition: 0.3s;
-  padding: 15px 0;
-}
 
-#clients img:hover {
-  opacity: 1;
+  transition: 0.2s;
+  padding: 15px 0;
 }
 
 #clients .owl-nav,
@@ -735,9 +726,6 @@ h6 {
   background-color: #1bb1dc;
 }
 
-
-
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -746,6 +734,7 @@ h6 {
   padding: 0 0 30px 0;
   font-size: 14px;
   background: #fff;
+  text-align: center;
 }
 
 #footer .footer-top {
@@ -1095,3 +1084,12 @@ h6 {
     margin-bottom: 25px;
   }
 }
+
+/*--------------------------------------------------------------
+# Loginform
+--------------------------------------------------------------*/
+
+.navbar .dropdown-menu .form-control {
+  width: 200px;
+}
+
