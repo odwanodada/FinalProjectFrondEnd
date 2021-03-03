@@ -1,39 +1,73 @@
-.container {
+.gallery {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 50px 0;
 }
-
-.container .card {
-  position: relative;
-  min-width: 320px;
-  height: 400px;
-  border-radius: 68px;
-  background: linear-gradient(145deg, #4bd1db, #59f8ff);
-  box-shadow: 5px 5px 0px #40b3bb, -5px -5px 0px #66ffff;
-  margin: 30px;
-}
-
-.container .card .box {
-
-  background: blanchedalmond;
-  border: 2px solid black;
-  border-radius: 15px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-
-.container .card .box:hover {
-  transform: translateY(-50px);
-  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
-}
-
-.container .card .box:hover.content {
-  padding: 20px;
+.content {
+  width: 24%;
+  margin: 15px;
+  box-sizing: border-box;
+  float: left;
   text-align: center;
+  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+.content:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  transform: translate(0px, -8px);
+  transition: 0.6s;
 }
 
+.buy {
+  background-color: pink;
+}
 
+.buy:hover{
+  background-color: green;
+
+}
+
+p{
+  font-size: 20px;
+  color: blue;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  }
+
+button {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    width: 46%;
+  }
+}
+@media (max-width: 750px) {
+  .content {
+    width: 100%;
+  }
+}
