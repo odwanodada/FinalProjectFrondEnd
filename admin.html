@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div id="list1" class="list">
+        <ul id="show">
+            <li>id</li>
+            <li>Title</li>
+            <li>Author</li>
+            <li>Genres</li>
+            <li>Originally_published</li>
+            <li>Price</li>
+            <li>Images</li>
+        </ul>
+
+        <ul id="diplaylist">
+
+        </ul>
+
+
+
+
+    </div>
+
+
+    <form id="create-form" onsubmit="event.preventDefault(); addItem()">
+        <ul class="flex-outer">
+         
+            <li>
+                <label for="Author">Author</label>
+                <input type="text" id="author" name="author" placeholder="Enter author name">
+            </li>
+            <li>
+                <label for="Title">Title</label>
+                <input type="text" id="" name="title" placeholder="Enter Title">
+            </li>
+            <li>
+                <label for="Genres">Genres</label>
+                <input type="text" id="input" name="genres" placeholder="Enter Genres">
+            </li>
+            <li>
+                <label for="OP">Originally_published</label>
+                <input type="text" id="input" name="op" placeholder="Enter Originally_published">
+            </li>
+
+            <li>
+                <label for="Price">Price</label>
+                <input type="text" id="input" name="price" placeholder="Enter Price">
+
+            </li>
+
+            <li>
+                <label for="picture">Images</label>
+                <input type="text" id="input" name="images" placeholder="Enter Originally_published">
+            </li>
+
+            
+            <li>
+                <button type="submit">Insert</button>
+
+            </li>
+            
+           
+
+
+
+        </ul>
+    </form>
+
+
+
+
+
+
+    <script src="js/admin.js"></script>
+
+
+
+
+</body>
+
+</html>
