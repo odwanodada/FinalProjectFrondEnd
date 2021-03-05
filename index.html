@@ -34,7 +34,7 @@
 </head>
 
 <body>
-  
+
   <!--==========================
   Header
   ============================-->
@@ -53,7 +53,35 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#Books">Books</a></li>
           <li><a href="#footer">Contact Us</a></li>
-          <li><a href="#team">SignUp</a></li>
+          <li class="drop-down"><a href="">Signup</a>
+
+            <ul>
+              <li class="px-3 py-2">
+                <form onsubmit="event.preventDefault(); personReg();" id="reg-form" class="form" role="form">
+                  <div class="form-group">
+                    <input id="nameInput" placeholder="Name" class="form-control form-control-sm" type="text"
+                      required="">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text"
+                      required="">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text"
+                      required="">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Signup</button>
+                  </div>
+                </form>
+              </li>
+
+            </ul>
+
+          </li>
 
           <li class="drop-down"><a href="">Login</a>
             <ul>
@@ -63,15 +91,14 @@
                     <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text"
                       required="">
                   </div>
+                  <br>
                   <div class="form-group">
                     <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text"
                       required="">
                   </div>
+                  <br>
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
-                  </div>
-                  <div class="form-group text-center">
-                    <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
                   </div>
                 </form>
               </li>
@@ -294,7 +321,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
- 
+
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>

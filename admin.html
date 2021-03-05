@@ -32,16 +32,16 @@
     </div>
 
 
-    <form id="create-form" onsubmit="event.preventDefault(); addItem()">
+    <form onsubmit="event.preventDefault(); addItem();" id="insert-form">
         <ul class="flex-outer">
-         
+
             <li>
                 <label for="Author">Author</label>
                 <input type="text" id="author" name="author" placeholder="Enter author name">
             </li>
             <li>
                 <label for="Title">Title</label>
-                <input type="text" id="" name="title" placeholder="Enter Title">
+                <input type="text" id="title" name="title" placeholder="Enter Title">
             </li>
             <li>
                 <label for="Genres">Genres</label>
@@ -63,13 +63,13 @@
                 <input type="text" id="input" name="images" placeholder="Enter Originally_published">
             </li>
 
-            
+
             <li>
                 <button type="submit">Insert</button>
 
             </li>
-            
-           
+
+
 
 
 
