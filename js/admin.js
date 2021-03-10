@@ -59,3 +59,28 @@ function addItem() {
       document.getElementById("reg-form").reset();
     });
 }
+
+
+
+
+function allcustomers() {
+  // Fetch the data
+  fetch("http://127.0.0.1:5000/show-customers/")
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      json.forEach((display) => showCustomers(display));
+    });
+}
+
+function showCustomers(customers) {
+  const people = `  <ul id="diplayPeople">
+                        <li>${customers.id}</li>
+                        <li>${customers.name}</li>
+                        <li>${customers.email}</li>
+                    </ul>`;
+  let show = document.getElementById("customerList");
+  show.innerHTML += people;
+}
+
+allCustomers();

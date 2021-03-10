@@ -141,16 +141,16 @@
   });
 })(jQuery);
 
+// REGISTRATION FUNCTION
 
 function personReg() {
   const inputs = document.getElementsByTagName("input");
-  fetch("http://127.0.0.1:5000/add-books/", {
+  fetch("http://127.0.0.1:5000/customer-reg/", {
     method: "POST",
     body: JSON.stringify({
       Name: inputs[0].value,
       Email: inputs[1].value,
       Password: inputs[2].value,
-      Cart: inputs[3].value,
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -160,6 +160,48 @@ function personReg() {
     .then((json) => {
       // console.log(json);
       alert("You have been Registed");
-      document.getElementById("insert-form").reset();
+      document.getElementById("reg-form").reset();
     });
+}
+
+//LOGIN FUNCTION
+
+function login() {
+  let form = document.getElementById("login");
+  let inputs = form.getElementsByTagName("input");
+
+  let eml = inputs[0].value;
+  let pswrd = inputs[1].value;
+  console.log(eml);
+  console.log(pswrd);
+
+  let users = [];
+
+  fetch("http://127.0.0.1:5000/show-customers/")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      users = data;
+    });
+  let loggedIn = users.filter((user) => {
+    return user.email == eml && user.password == pswrd;
+  });
+
+  console.log(loggedIn);
+
+  if (loggedIn.length >= 0) {
+    alert("You are now logged in");
+    window.location.href = "./showtable.html";
+  } else {
+    alert("Credentials invalid");
+  }
+}
+
+function myFunction() {
+  let x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
 }
