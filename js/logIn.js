@@ -1,6 +1,6 @@
 let users = [];
 
-fetch("http://127.0.0.1:5000/show-customers/")
+fetch("https://ancient-springs-62176.herokuapp.com/show-customers/")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
@@ -23,6 +23,8 @@ function login() {
   console.log(loggedIn);
 
   if (loggedIn.length > 0) {
+     localStorage.setItem("user", JSON.stringify(logged[0]))
+     JSON.parse(localStorage.getItem("user"))
     alert("You are now logged in");
     window.location.href = "/.showtable.html";
     console.log(window.location.href);

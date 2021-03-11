@@ -1,6 +1,6 @@
 function listAll() {
   // Fetch the data
-  fetch("http://127.0.0.1:5000/show-items/")
+  fetch("https://ancient-springs-62176.herokuapp.com/show-items/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -10,7 +10,8 @@ function listAll() {
 
 function deleteItem(id) {
   // Fetch the data
-  let apiUrl = "http://127.0.0.1:5000/delete-records/" + id;
+  let apiUrl =
+    "https://ancient-springs-62176.herokuapp.com/delete-records/" + id;
   alert("Deleted");
   fetch(apiUrl)
     .then((response) => response.json())
@@ -38,7 +39,7 @@ listAll();
 
 function addItem() {
   const inputs = document.getElementsByTagName("input");
-  fetch("http://127.0.0.1:5000/add-books/" ,{
+  fetch("https://ancient-springs-62176.herokuapp.com/add-books/", {
     method: "POST",
     body: JSON.stringify({
       title: inputs[0].value,
@@ -60,12 +61,9 @@ function addItem() {
     });
 }
 
-
-
-
-function allcustomers() {
+function allCustomers() {
   // Fetch the data
-  fetch("http://127.0.0.1:5000/show-customers/")
+  fetch("https://ancient-springs-62176.herokuapp.com/show-customers/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);

@@ -145,7 +145,7 @@
 
 function personReg() {
   const inputs = document.getElementsByTagName("input");
-  fetch("http://127.0.0.1:5000/customer-reg/", {
+  fetch("https://ancient-springs-62176.herokuapp.com/customer-reg/", {
     method: "POST",
     body: JSON.stringify({
       Name: inputs[0].value,
@@ -177,7 +177,7 @@ function login() {
 
   let users = [];
 
-  fetch("http://127.0.0.1:5000/show-customers/")
+  fetch("https://ancient-springs-62176.herokuapp.com/show-customers/")
     .then((res) => res.json())
     .then((data) => {
       console.log(data);

@@ -1,6 +1,6 @@
 function getAlldata() {
   // Fetch the data
-  fetch("http://127.0.0.1:5000/show-items/")
+  fetch("https://ancient-springs-62176.herokuapp.com/show-items/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -16,7 +16,7 @@ function displayItems(Items) {
                      <p>${Items.Genres}</p>
                      <p>${Items.Originally_published}</p>
                      <p>R${Items.Price}</p>
-                   <button class="buy">AddToCart</button>
+                   <button class="buy" onclick="addToCart(${ Items.id })">Cart</button>
                 </div> `;
   let list = document.getElementById("container");
   list.innerHTML += item;
