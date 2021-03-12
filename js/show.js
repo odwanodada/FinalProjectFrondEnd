@@ -16,7 +16,7 @@ function displayItems(Items) {
                      <p>${Items.Genres}</p>
                      <p>${Items.Originally_published}</p>
                      <p>R${Items.Price}</p>
-                   <button class="buy" onclick="addToCart(${ Items.id })">Cart</button>
+                   <button class="buy"><i class="fa fa-shopping-cart"></i>AddToCart</button>
                 </div> `;
   let list = document.getElementById("container");
   list.innerHTML += item;
@@ -49,3 +49,8 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+
+
+
+"https://ancient-springs-62176.herokuapp.com/show-items/"
